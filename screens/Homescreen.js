@@ -145,58 +145,18 @@ export default function Homescreen({ navigation }) {
       name: nameOfTeam,
       bowlers: sortedcurrInGame,
       bakerBowlers: [bakers, bakers, bakers, bakers, bakers],
-      homeScoresAmerican: [0, 0, 0, 0, 0, 0],
-      awayScoresAmerican: [0, 0, 0, 0, 0, 0],
-      homeScoresBaker: [0, 0, 0, 0, 0, 0],
-      awayScoresBaker: [0, 0, 0, 0, 0, 0],
+      homeScoresAmerican: [null, null, null, null, null, null],
+      awayScoresAmerican: [null, null, null, null, null, null],
+      homeScoresBaker: [null, null, null, null, null, null],
+      awayScoresBaker: [null, null, null, null, null, null],
       date: month + "/" + day + "/" + year,
-      americanFrames: ["0", "0", "0", "0", "0", "0"],
+      americanFrames: ["", "", "", "", "", ""],
       bakerFrames: [
-        [
-          ["10", "9"],
-          ["8", "7"],
-          ["6", "5"],
-          ["4", "3"],
-          ["2", "1"],
-          [""],
-          [""],
-        ],
-        [
-          ["10", "9"],
-          ["8", "7"],
-          ["6", "5"],
-          ["4", "3"],
-          ["2", "1"],
-          [""],
-          [""],
-        ],
-        [
-          ["10", "9"],
-          ["8", "7"],
-          ["6", "5"],
-          ["4", "3"],
-          ["2", "1"],
-          [""],
-          [""],
-        ],
-        [
-          ["10", "9"],
-          ["8", "7"],
-          ["6", "5"],
-          ["4", "3"],
-          ["2", "1"],
-          [""],
-          [""],
-        ],
-        [
-          ["10", "9"],
-          ["8", "7"],
-          ["6", "5"],
-          ["4", "3"],
-          ["2", "1"],
-          [""],
-          [""],
-        ],
+        [["", ""], ["", ""], ["", ""], ["", ""], ["", ""], [""], [""]],
+        [["", ""], ["", ""], ["", ""], ["", ""], ["", ""], [""], [""]],
+        [["", ""], ["", ""], ["", ""], ["", ""], ["", ""], [""], [""]],
+        [["", ""], ["", ""], ["", ""], ["", ""], ["", ""], [""], [""]],
+        [["", ""], ["", ""], ["", ""], ["", ""], ["", ""], [""], [""]],
       ],
     });
     setName("");
@@ -472,8 +432,9 @@ export default function Homescreen({ navigation }) {
                     alignItems: "center",
                     justifyContent: "space-between",
                   }}
-                  onPress={() =>
+                  onPress={() => {
                     navigation.navigate("Match", {
+                      matchName: match[index].name,
                       match: match[index],
                       allBowlers: bowlers,
                       index: index,
@@ -500,16 +461,31 @@ export default function Homescreen({ navigation }) {
                       BakerawayScore3: match[index].awayScoresBaker[2],
                       BakerawayScore4: match[index].awayScoresBaker[3],
                       BakerawayScore5: match[index].awayScoresBaker[4],
-                    })
-                  }
+                    });
+                  }}
                 >
-                  <View style={{ flexDirection: "column" }}>
-                    <Text style={{ fontSize: 30, color: "#a30200" }}>
-                      {item.name}
-                    </Text>
+                  <View style={{ flexDirection: "column", flex: 2.5 }}>
+                    <View
+                      style={{
+                        flexDirection: "row",
+                        flex: 2.75,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 30,
+                          color: "#a30200",
+                        }}
+                        numberOfLines={1}
+                      >
+                        {item.name}
+                      </Text>
+                    </View>
+
                     <View
                       style={{
                         alignItems: "flex-start",
+                        flex: 1,
                       }}
                     >
                       {calculateFinalScore(
@@ -850,12 +826,24 @@ export default function Homescreen({ navigation }) {
 
                   <View
                     style={{
-                      justifyContent: "space-evenly",
-                      flexDirection: "column",
-                      alignContent: "flex-end",
+                      flexDirection: "row",
+                      justifyContent: "flex-end",
+                      flex: 1,
                     }}
                   >
-                    <View style={{ alignItems: "flex-end" }}>
+                    <Text
+                      style={{
+                        textAlign: "right",
+                        color: "black",
+                        fontSize: 15,
+                        position: "absolute",
+                        right: 15,
+                        top: -14,
+                      }}
+                    >
+                      {item.date}
+                    </Text>
+                    <View style={{ position: "absolute", top: -10 }}>
                       <Image
                         source={continueArrow}
                         style={{
@@ -865,16 +853,6 @@ export default function Homescreen({ navigation }) {
                         }}
                       />
                     </View>
-
-                    <Text
-                      style={{
-                        textAlign: "right",
-                        color: "black",
-                        fontSize: 15,
-                      }}
-                    >
-                      {item.date}
-                    </Text>
                   </View>
                 </TouchableOpacity>
               </ImageBackground>
@@ -966,7 +944,7 @@ export default function Homescreen({ navigation }) {
                   marginBottom: 10,
                 }}
               >
-                <Text style={{ fontSize: 30 }}>Date: </Text>
+                <Text style={{ fontSize: 30, fontWeight: "bold" }}>Date: </Text>
                 <TextInput
                   style={{
                     borderColor: "black",
@@ -977,6 +955,7 @@ export default function Homescreen({ navigation }) {
                     height: 40,
                   }}
                   returnKeyType="done"
+                  keyboardType="numeric"
                   onChangeText={(newText) => setMonth(newText)}
                   // placeholder="Enter Opponent School Name"
                   defaultValue={JSON.stringify(currDate.getMonth() + 1)}
@@ -994,6 +973,7 @@ export default function Homescreen({ navigation }) {
                     height: 40,
                   }}
                   returnKeyType="done"
+                  keyboardType="numeric"
                   onChangeText={(newText) => setDay(newText)}
                   // placeholder="Enter Opponent School Name"
                   defaultValue={JSON.stringify(currDate.getDate())}
@@ -1011,6 +991,7 @@ export default function Homescreen({ navigation }) {
                     height: 40,
                   }}
                   returnKeyType="done"
+                  keyboardType="numeric"
                   onChangeText={(newText) => setYear(newText)}
                   // placeholder="Enter Opponent School Name"
                   defaultValue={JSON.stringify(currDate.getFullYear())}

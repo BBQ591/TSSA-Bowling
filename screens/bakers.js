@@ -607,6 +607,7 @@ export default function Bakers({ route, navigation }) {
           flexDirection: "row",
           justifyContent: "space-between",
           top: 70,
+          paddingBottom: 75,
         }}
       >
         <View
@@ -683,12 +684,24 @@ export default function Bakers({ route, navigation }) {
                   : JSON.stringify(BakerhomeScore1)
               }
               onChangeText={(newText) => {
-                setBakerhomeScore1(parseInt(newText));
-                navigation.navigate({
-                  name: "Match",
-                  params: { BakerhomeScore1: parseInt(newText) },
-                  merge: true,
-                });
+                if (!isNaN(parseInt(newText))) {
+                  setBakerhomeScore1(parseInt(newText));
+
+                  console.log("is numberrrrr", typeof homeScore6);
+                  navigation.navigate({
+                    name: "Match",
+                    params: { BakerhomeScore1: parseInt(newText) },
+                    merge: true,
+                  });
+                } else {
+                  setBakerhomeScore1(null);
+
+                  navigation.navigate({
+                    name: "Match",
+                    params: { BakerhomeScore1: null },
+                    merge: true,
+                  });
+                }
               }}
             ></TextInput>
             <View
@@ -722,12 +735,24 @@ export default function Bakers({ route, navigation }) {
               placeholder="0"
               keyboardType="numeric"
               onChangeText={(newText) => {
-                setBakerawayScore1(parseInt(newText));
-                navigation.navigate({
-                  name: "Match",
-                  params: { BakerawayScore1: parseInt(newText) },
-                  merge: true,
-                });
+                if (!isNaN(parseInt(newText))) {
+                  setBakerawayScore1(parseInt(newText));
+
+                  console.log("is numberrrrr", typeof homeScore6);
+                  navigation.navigate({
+                    name: "Match",
+                    params: { BakerawayScore1: parseInt(newText) },
+                    merge: true,
+                  });
+                } else {
+                  setBakerawayScore1(null);
+
+                  navigation.navigate({
+                    name: "Match",
+                    params: { BakerawayScore1: null },
+                    merge: true,
+                  });
+                }
               }}
             ></TextInput>
           </TouchableOpacity>
@@ -768,12 +793,24 @@ export default function Bakers({ route, navigation }) {
               placeholder="0"
               keyboardType="numeric"
               onChangeText={(newText) => {
-                setBakerhomeScore2(parseInt(newText));
-                navigation.navigate({
-                  name: "Match",
-                  params: { BakerhomeScore2: parseInt(newText) },
-                  merge: true,
-                });
+                if (!isNaN(parseInt(newText))) {
+                  setBakerhomeScore2(parseInt(newText));
+
+                  console.log("is numberrrrr", typeof homeScore6);
+                  navigation.navigate({
+                    name: "Match",
+                    params: { BakerhomeScore2: parseInt(newText) },
+                    merge: true,
+                  });
+                } else {
+                  setBakerhomeScore2(null);
+
+                  navigation.navigate({
+                    name: "Match",
+                    params: { BakerhomeScore2: null },
+                    merge: true,
+                  });
+                }
               }}
             ></TextInput>
             <View
@@ -806,12 +843,24 @@ export default function Bakers({ route, navigation }) {
               placeholder="0"
               keyboardType="numeric"
               onChangeText={(newText) => {
-                setBakerawayScore2(parseInt(newText));
-                navigation.navigate({
-                  name: "Match",
-                  params: { BakerawayScore2: parseInt(newText) },
-                  merge: true,
-                });
+                if (!isNaN(parseInt(newText))) {
+                  setBakerawayScore2(parseInt(newText));
+
+                  console.log("is numberrrrr", typeof homeScore6);
+                  navigation.navigate({
+                    name: "Match",
+                    params: { BakerawayScore2: parseInt(newText) },
+                    merge: true,
+                  });
+                } else {
+                  setBakerawayScore2(null);
+
+                  navigation.navigate({
+                    name: "Match",
+                    params: { BakerawayScore2: null },
+                    merge: true,
+                  });
+                }
               }}
             ></TextInput>
           </TouchableOpacity>
@@ -853,12 +902,24 @@ export default function Bakers({ route, navigation }) {
               placeholder="0"
               keyboardType="numeric"
               onChangeText={(newText) => {
-                setBakerhomeScore3(parseInt(newText));
-                navigation.navigate({
-                  name: "Match",
-                  params: { BakerhomeScore3: parseInt(newText) },
-                  merge: true,
-                });
+                if (!isNaN(parseInt(newText))) {
+                  setBakerhomeScore3(parseInt(newText));
+
+                  console.log("is numberrrrr", typeof homeScore6);
+                  navigation.navigate({
+                    name: "Match",
+                    params: { BakerhomeScore3: parseInt(newText) },
+                    merge: true,
+                  });
+                } else {
+                  setBakerhomeScore3(null);
+
+                  navigation.navigate({
+                    name: "Match",
+                    params: { BakerhomeScore3: null },
+                    merge: true,
+                  });
+                }
               }}
             ></TextInput>
             <View
@@ -891,12 +952,24 @@ export default function Bakers({ route, navigation }) {
               placeholder="0"
               keyboardType="numeric"
               onChangeText={(newText) => {
-                setBakerawayScore3(parseInt(newText));
-                navigation.navigate({
-                  name: "Match",
-                  params: { BakerhomeScore3: parseInt(newText) },
-                  merge: true,
-                });
+                if (!isNaN(parseInt(newText))) {
+                  setBakerawayScore3(parseInt(newText));
+
+                  console.log("is numberrrrr", typeof homeScore6);
+                  navigation.navigate({
+                    name: "Match",
+                    params: { BakerawayScore3: parseInt(newText) },
+                    merge: true,
+                  });
+                } else {
+                  setBakerawayScore3(null);
+
+                  navigation.navigate({
+                    name: "Match",
+                    params: { BakerawayScore3: null },
+                    merge: true,
+                  });
+                }
               }}
             ></TextInput>
           </TouchableOpacity>
@@ -937,12 +1010,24 @@ export default function Bakers({ route, navigation }) {
               placeholder="0"
               keyboardType="numeric"
               onChangeText={(newText) => {
-                setBakerhomeScore4(parseInt(newText));
-                navigation.navigate({
-                  name: "Match",
-                  params: { BakerhomeScore4: parseInt(newText) },
-                  merge: true,
-                });
+                if (!isNaN(parseInt(newText))) {
+                  setBakerhomeScore4(parseInt(newText));
+
+                  console.log("is numberrrrr", typeof homeScore6);
+                  navigation.navigate({
+                    name: "Match",
+                    params: { BakerhomeScore4: parseInt(newText) },
+                    merge: true,
+                  });
+                } else {
+                  setBakerhomeScore4(null);
+
+                  navigation.navigate({
+                    name: "Match",
+                    params: { BakerhomeScore4: null },
+                    merge: true,
+                  });
+                }
               }}
             ></TextInput>
             <View
@@ -975,12 +1060,24 @@ export default function Bakers({ route, navigation }) {
               placeholder="0"
               keyboardType="numeric"
               onChangeText={(newText) => {
-                setBakerawayScore4(parseInt(newText));
-                navigation.navigate({
-                  name: "Match",
-                  params: { BakerawayScore4: parseInt(newText) },
-                  merge: true,
-                });
+                if (!isNaN(parseInt(newText))) {
+                  setBakerawayScore4(parseInt(newText));
+
+                  console.log("is numberrrrr", typeof homeScore6);
+                  navigation.navigate({
+                    name: "Match",
+                    params: { BakerawayScore4: parseInt(newText) },
+                    merge: true,
+                  });
+                } else {
+                  setBakerawayScore4(null);
+
+                  navigation.navigate({
+                    name: "Match",
+                    params: { BakerawayScore4: null },
+                    merge: true,
+                  });
+                }
               }}
             ></TextInput>
           </TouchableOpacity>
@@ -1021,12 +1118,24 @@ export default function Bakers({ route, navigation }) {
               placeholder="0"
               keyboardType="numeric"
               onChangeText={(newText) => {
-                setBakerhomeScore5(parseInt(newText));
-                navigation.navigate({
-                  name: "Match",
-                  params: { BakerhomeScore5: parseInt(newText) },
-                  merge: true,
-                });
+                if (!isNaN(parseInt(newText))) {
+                  setBakerhomeScore5(parseInt(newText));
+
+                  console.log("is numberrrrr", typeof homeScore6);
+                  navigation.navigate({
+                    name: "Match",
+                    params: { BakerhomeScore5: parseInt(newText) },
+                    merge: true,
+                  });
+                } else {
+                  setBakerhomeScore5(null);
+
+                  navigation.navigate({
+                    name: "Match",
+                    params: { BakerhomeScore5: null },
+                    merge: true,
+                  });
+                }
               }}
             ></TextInput>
             <View
@@ -1059,12 +1168,24 @@ export default function Bakers({ route, navigation }) {
               placeholder="0"
               keyboardType="numeric"
               onChangeText={(newText) => {
-                setBakerawayScore5(parseInt(newText));
-                navigation.navigate({
-                  name: "Match",
-                  params: { BakerawayScore5: parseInt(newText) },
-                  merge: true,
-                });
+                if (!isNaN(parseInt(newText))) {
+                  setBakerawayScore5(parseInt(newText));
+
+                  console.log("is numberrrrr", typeof homeScore6);
+                  navigation.navigate({
+                    name: "Match",
+                    params: { BakerawayScore5: parseInt(newText) },
+                    merge: true,
+                  });
+                } else {
+                  setBakerawayScore5(null);
+
+                  navigation.navigate({
+                    name: "Match",
+                    params: { BakerawayScore5: null },
+                    merge: true,
+                  });
+                }
               }}
             ></TextInput>
           </TouchableOpacity>
@@ -1114,23 +1235,31 @@ export default function Bakers({ route, navigation }) {
           </LinearGradient>
         </View>
       </View>
-      {/* <View
+      <View
         style={{
-          paddingTop: 120,
-          justifyContent: "space-evenly",
           flexDirection: "row",
+          justifyContent: "space-evenly",
           alignItems: "center",
-          marginBottom: 120,
+          paddingBottom: 150,
+          paddingTop: 30,
         }}
-      > */}
-      {/* <Text style={{ fontSize: 30, fontWeight: "bold" }}>
-          {BakerhomeScore}
+      >
+        <Text style={{ fontSize: 30 }}>
+          {BakerhomeScore1 +
+            BakerhomeScore2 +
+            BakerhomeScore3 +
+            BakerhomeScore4 +
+            BakerhomeScore5}
         </Text>
-        <Image source={versus} style={{ height: 40, width: 40 }} />
-        <Text style={{ fontSize: 30, fontWeight: "bold" }}>
-          {BakerawayScore}
+        <Text style={{ fontSize: 30, fontWeight: "bold" }}>PINFALL</Text>
+        <Text style={{ fontSize: 30 }}>
+          {BakerawayScore1 +
+            BakerawayScore2 +
+            BakerawayScore3 +
+            BakerawayScore4 +
+            BakerawayScore5}
         </Text>
-      </View> */}
+      </View>
     </ScrollView>
   );
 }

@@ -20,7 +20,6 @@ export default function American10({ navigation, route }) {
   const [awayScore5, setawayScore5] = useState(match.awayScoresAmerican[4]);
   const [awayScore6, setawayScore6] = useState(match.awayScoresAmerican[5]);
   const [frames, setFrames] = useState(match.americanFrames);
-  console.log(frames, "frames");
   const [open, setOpen] = useState([
     false,
     false,
@@ -36,7 +35,6 @@ export default function American10({ navigation, route }) {
     temp[indexer] = inputer;
     setFrames(temp);
     allMatches[index].americanFrames = temp;
-    console.log(temp);
     const _storeData2 = async () => {
       try {
         await AsyncStorage.setItem("games", JSON.stringify(allMatches));
@@ -211,12 +209,23 @@ export default function American10({ navigation, route }) {
           placeholder="0"
           keyboardType="numeric"
           onChangeText={(newText) => {
-            sethomeScore1(parseInt(newText));
-            navigation.navigate({
-              name: "Match",
-              params: { homeScore1: parseInt(newText) },
-              merge: true,
-            });
+            if (!isNaN(parseInt(newText))) {
+              sethomeScore1(parseInt(newText));
+
+              navigation.navigate({
+                name: "Match",
+                params: { homeScore1: parseInt(newText) },
+                merge: true,
+              });
+            } else {
+              sethomeScore1(null);
+
+              navigation.navigate({
+                name: "Match",
+                params: { homeScore1: null },
+                merge: true,
+              });
+            }
           }}
         ></TextInput>
         <Image source={versus} style={{ height: 30, width: 30 }} />
@@ -241,12 +250,23 @@ export default function American10({ navigation, route }) {
           keyboardType="numeric"
           placeholder="0"
           onChangeText={(newText) => {
-            setawayScore1(parseInt(newText));
-            navigation.navigate({
-              name: "Match",
-              params: { awayScore1: parseInt(newText) },
-              merge: true,
-            });
+            if (!isNaN(parseInt(newText))) {
+              setawayScore1(parseInt(newText));
+
+              navigation.navigate({
+                name: "Match",
+                params: { awayScore1: parseInt(newText) },
+                merge: true,
+              });
+            } else {
+              setawayScore1(null);
+
+              navigation.navigate({
+                name: "Match",
+                params: { awayScore1: null },
+                merge: true,
+              });
+            }
           }}
         ></TextInput>
         <View
@@ -355,12 +375,23 @@ export default function American10({ navigation, route }) {
           keyboardType="numeric"
           placeholder="0"
           onChangeText={(newText) => {
-            sethomeScore2(parseInt(newText));
-            navigation.navigate({
-              name: "Match",
-              params: { homeScore2: parseInt(newText) },
-              merge: true,
-            });
+            if (!isNaN(parseInt(newText))) {
+              sethomeScore2(parseInt(newText));
+
+              navigation.navigate({
+                name: "Match",
+                params: { homeScore2: parseInt(newText) },
+                merge: true,
+              });
+            } else {
+              sethomeScore2(null);
+
+              navigation.navigate({
+                name: "Match",
+                params: { homeScore2: null },
+                merge: true,
+              });
+            }
           }}
         ></TextInput>
         <Image source={versus} style={{ height: 30, width: 30 }} />
@@ -385,12 +416,23 @@ export default function American10({ navigation, route }) {
           placeholder="0"
           keyboardType="numeric"
           onChangeText={(newText) => {
-            setawayScore2(parseInt(newText));
-            navigation.navigate({
-              name: "Match",
-              params: { awayScore2: parseInt(newText) },
-              merge: true,
-            });
+            if (!isNaN(parseInt(newText))) {
+              setawayScore2(parseInt(newText));
+
+              navigation.navigate({
+                name: "Match",
+                params: { awayScore2: parseInt(newText) },
+                merge: true,
+              });
+            } else {
+              setawayScore2(null);
+
+              navigation.navigate({
+                name: "Match",
+                params: { awayScore2: null },
+                merge: true,
+              });
+            }
           }}
         ></TextInput>
         <View style={{ padding: 20, flex: 1, alignItems: "center" }}>
@@ -492,12 +534,23 @@ export default function American10({ navigation, route }) {
           keyboardType="numeric"
           placeholder="0"
           onChangeText={(newText) => {
-            sethomeScore3(parseInt(newText));
-            navigation.navigate({
-              name: "Match",
-              params: { homeScore3: parseInt(newText) },
-              merge: true,
-            });
+            if (!isNaN(parseInt(newText))) {
+              sethomeScore3(parseInt(newText));
+
+              navigation.navigate({
+                name: "Match",
+                params: { homeScore3: parseInt(newText) },
+                merge: true,
+              });
+            } else {
+              sethomeScore3(null);
+
+              navigation.navigate({
+                name: "Match",
+                params: { homeScore3: null },
+                merge: true,
+              });
+            }
           }}
         ></TextInput>
         <Image source={versus} style={{ height: 30, width: 30 }} />
@@ -522,12 +575,23 @@ export default function American10({ navigation, route }) {
           keyboardType="numeric"
           placeholder="0"
           onChangeText={(newText) => {
-            setawayScore3(parseInt(newText));
-            navigation.navigate({
-              name: "Match",
-              params: { awayScore3: parseInt(newText) },
-              merge: true,
-            });
+            if (!isNaN(parseInt(newText))) {
+              setawayScore3(parseInt(newText));
+
+              navigation.navigate({
+                name: "Match",
+                params: { awayScore3: parseInt(newText) },
+                merge: true,
+              });
+            } else {
+              setawayScore3(null);
+
+              navigation.navigate({
+                name: "Match",
+                params: { awayScore3: null },
+                merge: true,
+              });
+            }
           }}
         ></TextInput>
         <View style={{ padding: 20, flex: 1, alignItems: "center" }}>
@@ -629,12 +693,23 @@ export default function American10({ navigation, route }) {
           keyboardType="numeric"
           placeholder="0"
           onChangeText={(newText) => {
-            sethomeScore4(parseInt(newText));
-            navigation.navigate({
-              name: "Match",
-              params: { homeScore4: parseInt(newText) },
-              merge: true,
-            });
+            if (!isNaN(parseInt(newText))) {
+              sethomeScore4(parseInt(newText));
+
+              navigation.navigate({
+                name: "Match",
+                params: { homeScore4: parseInt(newText) },
+                merge: true,
+              });
+            } else {
+              sethomeScore4(null);
+
+              navigation.navigate({
+                name: "Match",
+                params: { homeScore4: null },
+                merge: true,
+              });
+            }
           }}
         ></TextInput>
         <Image source={versus} style={{ height: 30, width: 30 }} />
@@ -659,12 +734,23 @@ export default function American10({ navigation, route }) {
           keyboardType="numeric"
           placeholder="0"
           onChangeText={(newText) => {
-            setawayScore4(parseInt(newText));
-            navigation.navigate({
-              name: "Match",
-              params: { awayScore4: parseInt(newText) },
-              merge: true,
-            });
+            if (!isNaN(parseInt(newText))) {
+              setawayScore4(parseInt(newText));
+
+              navigation.navigate({
+                name: "Match",
+                params: { awayScore4: parseInt(newText) },
+                merge: true,
+              });
+            } else {
+              sethomeScore4(null);
+
+              navigation.navigate({
+                name: "Match",
+                params: { awayScore4: null },
+                merge: true,
+              });
+            }
           }}
         ></TextInput>
         <View style={{ padding: 20, flex: 1, alignItems: "center" }}>
@@ -765,12 +851,23 @@ export default function American10({ navigation, route }) {
           returnKeyType="done"
           keyboardType="numeric"
           onChangeText={(newText) => {
-            sethomeScore5(parseInt(newText));
-            navigation.navigate({
-              name: "Match",
-              params: { homeScore5: parseInt(newText) },
-              merge: true,
-            });
+            if (!isNaN(parseInt(newText))) {
+              sethomeScore5(parseInt(newText));
+
+              navigation.navigate({
+                name: "Match",
+                params: { homeScore5: parseInt(newText) },
+                merge: true,
+              });
+            } else {
+              sethomeScore5(null);
+
+              navigation.navigate({
+                name: "Match",
+                params: { homeScore5: null },
+                merge: true,
+              });
+            }
           }}
           placeholder="0"
         ></TextInput>
@@ -796,12 +893,23 @@ export default function American10({ navigation, route }) {
           keyboardType="numeric"
           placeholder="0"
           onChangeText={(newText) => {
-            setawayScore5(parseInt(newText));
-            navigation.navigate({
-              name: "Match",
-              params: { awayScore5: parseInt(newText) },
-              merge: true,
-            });
+            if (!isNaN(parseInt(newText))) {
+              setawayScore5(parseInt(newText));
+
+              navigation.navigate({
+                name: "Match",
+                params: { awayScore5: parseInt(newText) },
+                merge: true,
+              });
+            } else {
+              setawayScore5(null);
+
+              navigation.navigate({
+                name: "Match",
+                params: { awayScore5: null },
+                merge: true,
+              });
+            }
           }}
         ></TextInput>
         <View style={{ padding: 20, flex: 1, alignItems: "center" }}>
@@ -857,7 +965,7 @@ export default function American10({ navigation, route }) {
           justifyContent: "space-between",
           alignItems: "center",
           top: 70,
-          paddingBottom: 200,
+          paddingBottom: 75,
         }}
       >
         <View
@@ -904,12 +1012,23 @@ export default function American10({ navigation, route }) {
           keyboardType="numeric"
           placeholder="0"
           onChangeText={(newText) => {
-            sethomeScore6(parseInt(newText));
-            navigation.navigate({
-              name: "Match",
-              params: { homeScore6: parseInt(newText) },
-              merge: true,
-            });
+            if (!isNaN(parseInt(newText))) {
+              sethomeScore6(parseInt(newText));
+
+              navigation.navigate({
+                name: "Match",
+                params: { homeScore6: parseInt(newText) },
+                merge: true,
+              });
+            } else {
+              sethomeScore6(null);
+
+              navigation.navigate({
+                name: "Match",
+                params: { homeScore6: null },
+                merge: true,
+              });
+            }
           }}
         ></TextInput>
         <Image source={versus} style={{ height: 30, width: 30 }} />
@@ -934,12 +1053,23 @@ export default function American10({ navigation, route }) {
           returnKeyType="done"
           placeholder="0"
           onChangeText={(newText) => {
-            setawayScore6(parseInt(newText));
-            navigation.navigate({
-              name: "Match",
-              params: { homeScore6: parseInt(newText) },
-              merge: true,
-            });
+            if (!isNaN(parseInt(newText))) {
+              setawayScore6(parseInt(newText));
+
+              navigation.navigate({
+                name: "Match",
+                params: { awayScore6: parseInt(newText) },
+                merge: true,
+              });
+            } else {
+              setawayScore6(null);
+
+              navigation.navigate({
+                name: "Match",
+                params: { awayScore6: null },
+                merge: true,
+              });
+            }
           }}
         ></TextInput>
         <View style={{ padding: 20, flex: 1, alignItems: "center" }}>
@@ -979,22 +1109,35 @@ export default function American10({ navigation, route }) {
           ></TextInput>
         </View>
       )}
-      {/* <View
+      <View
         style={{
           flexDirection: "row",
           justifyContent: "space-evenly",
           alignItems: "center",
-          paddingBottom: 30,
           borderTopColor: "#575f63",
           borderTopWidth: 10,
-          paddingBottom: 200,
-          top: 70,
+          paddingBottom: 150,
+          paddingTop: 30,
         }}
       >
-        <Text style={{ fontSize: 30, fontWeight: "bold" }}>{homeScore}</Text>
-        <Image source={versus} style={{ height: 80, width: 80 }} />
-        <Text style={{ fontSize: 30, fontWeight: "bold" }}>{awayScore}</Text>
-      </View> */}
+        <Text style={{ fontSize: 30 }}>
+          {homeScore1 +
+            homeScore2 +
+            homeScore3 +
+            homeScore4 +
+            homeScore5 +
+            homeScore6}
+        </Text>
+        <Text style={{ fontSize: 30, fontWeight: "bold" }}>PINFALL</Text>
+        <Text style={{ fontSize: 30 }}>
+          {awayScore1 +
+            awayScore2 +
+            awayScore3 +
+            awayScore4 +
+            awayScore5 +
+            awayScore6}
+        </Text>
+      </View>
     </ScrollView>
   );
 }

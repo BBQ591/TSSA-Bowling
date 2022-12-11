@@ -37,358 +37,291 @@ const Tabs = ({ navigation, route }) => {
     BakerawayScore4,
     BakerawayScore5,
   } = route.params;
-  console.log(match);
   React.useEffect(() => {
-    if (route.params?.homeScore1) {
-      match.homeScoresAmerican[0] = homeScore1;
-      allMatches[index] = match;
-      const _storeData2 = async () => {
-        try {
-          await AsyncStorage.setItem("games", JSON.stringify(allMatches));
-        } catch (error) {
-          // Error saving data
-          console.log("error saving data");
-        }
-      };
-      _storeData2();
-      console.log(match, "dasfkfdaks;hahahahaha");
-    }
+    match.homeScoresAmerican[0] = homeScore1;
+    allMatches[index] = match;
+    const _storeData2 = async () => {
+      try {
+        await AsyncStorage.setItem("games", JSON.stringify(allMatches));
+      } catch (error) {
+        // Error saving data
+        console.log("error saving data");
+      }
+    };
+    _storeData2();
   }, [route.params?.homeScore1]);
   React.useEffect(() => {
-    if (route.params?.homeScore2) {
-      match.homeScoresAmerican[1] = homeScore2;
-      allMatches[index] = match;
-      const _storeData2 = async () => {
-        try {
-          await AsyncStorage.setItem("games", JSON.stringify(allMatches));
-        } catch (error) {
-          // Error saving data
-          console.log("error saving data");
-        }
-      };
-      _storeData2();
-      console.log(match, "dasfkfdaks;hahahahaha");
-    }
+    match.homeScoresAmerican[1] = homeScore2;
+    allMatches[index] = match;
+    const _storeData2 = async () => {
+      try {
+        await AsyncStorage.setItem("games", JSON.stringify(allMatches));
+      } catch (error) {
+        // Error saving data
+        console.log("error saving data");
+      }
+    };
+    _storeData2();
   }, [route.params?.homeScore2]);
   React.useEffect(() => {
-    if (route.params?.homeScore3) {
-      match.homeScoresAmerican[2] = homeScore3;
-      allMatches[index] = match;
-      const _storeData2 = async () => {
-        try {
-          await AsyncStorage.setItem("games", JSON.stringify(allMatches));
-        } catch (error) {
-          // Error saving data
-          console.log("error saving data");
-        }
-      };
-      _storeData2();
-      console.log(match, "dasfkfdaks;hahahahaha");
-    }
+    match.homeScoresAmerican[2] = homeScore3;
+    allMatches[index] = match;
+    const _storeData2 = async () => {
+      try {
+        await AsyncStorage.setItem("games", JSON.stringify(allMatches));
+      } catch (error) {
+        // Error saving data
+        console.log("error saving data");
+      }
+    };
+    _storeData2();
   }, [route.params?.homeScore3]);
   React.useEffect(() => {
-    if (route.params?.homeScore4) {
-      match.homeScoresAmerican[3] = homeScore4;
-      allMatches[index] = match;
-      const _storeData2 = async () => {
-        try {
-          await AsyncStorage.setItem("games", JSON.stringify(allMatches));
-        } catch (error) {
-          // Error saving data
-          console.log("error saving data");
-        }
-      };
-      _storeData2();
-      console.log(match, "dasfkfdaks;hahahahaha");
-    }
+    match.homeScoresAmerican[3] = homeScore4;
+    allMatches[index] = match;
+    const _storeData2 = async () => {
+      try {
+        await AsyncStorage.setItem("games", JSON.stringify(allMatches));
+      } catch (error) {
+        // Error saving data
+        console.log("error saving data");
+      }
+    };
+    _storeData2();
   }, [route.params?.homeScore4]);
   React.useEffect(() => {
-    if (route.params?.homeScore5) {
-      match.homeScoresAmerican[4] = homeScore5;
-      allMatches[index] = match;
-      const _storeData2 = async () => {
-        try {
-          await AsyncStorage.setItem("games", JSON.stringify(allMatches));
-        } catch (error) {
-          // Error saving data
-          console.log("error saving data");
-        }
-      };
-      _storeData2();
-      console.log(match, "dasfkfdaks;hahahahaha");
-    }
+    match.homeScoresAmerican[4] = homeScore5;
+    allMatches[index] = match;
+    const _storeData2 = async () => {
+      try {
+        await AsyncStorage.setItem("games", JSON.stringify(allMatches));
+      } catch (error) {
+        // Error saving data
+        console.log("error saving data");
+      }
+    };
+    _storeData2();
   }, [route.params?.homeScore5]);
   React.useEffect(() => {
-    if (route.params?.homeScore6) {
-      match.homeScoresAmerican[5] = homeScore6;
-      allMatches[index] = match;
-      const _storeData2 = async () => {
-        try {
-          await AsyncStorage.setItem("games", JSON.stringify(allMatches));
-        } catch (error) {
-          // Error saving data
-          console.log("error saving data");
-        }
-      };
-      _storeData2();
-      console.log(match, "dasfkfdaks;hahahahaha");
-    }
+    match.homeScoresAmerican[5] = homeScore6;
+    allMatches[index] = match;
+    const _storeData2 = async () => {
+      try {
+        await AsyncStorage.setItem("games", JSON.stringify(allMatches));
+      } catch (error) {
+        // Error saving data
+        console.log("error saving data");
+      }
+    };
+    _storeData2();
   }, [route.params?.homeScore6]);
   React.useEffect(() => {
-    if (route.params?.awayScore1) {
-      match.awayScoresAmerican[0] = awayScore1;
-      allMatches[index] = match;
-      const _storeData2 = async () => {
-        try {
-          await AsyncStorage.setItem("games", JSON.stringify(allMatches));
-        } catch (error) {
-          // Error saving data
-          console.log("error saving data");
-        }
-      };
-      _storeData2();
-      console.log(match, "dasfkfdaks;hahahahaha");
-    }
+    match.awayScoresAmerican[0] = awayScore1;
+    allMatches[index] = match;
+    const _storeData2 = async () => {
+      try {
+        await AsyncStorage.setItem("games", JSON.stringify(allMatches));
+      } catch (error) {
+        // Error saving data
+        console.log("error saving data");
+      }
+    };
+    _storeData2();
   }, [route.params?.awayScore1]);
   React.useEffect(() => {
-    if (route.params?.awayScore2) {
-      match.awayScoresAmerican[1] = awayScore2;
-      allMatches[index] = match;
-      const _storeData2 = async () => {
-        try {
-          await AsyncStorage.setItem("games", JSON.stringify(allMatches));
-        } catch (error) {
-          // Error saving data
-          console.log("error saving data");
-        }
-      };
-      _storeData2();
-      console.log(match, "dasfkfdaks;hahahahaha");
-    }
+    match.awayScoresAmerican[1] = awayScore2;
+    allMatches[index] = match;
+    const _storeData2 = async () => {
+      try {
+        await AsyncStorage.setItem("games", JSON.stringify(allMatches));
+      } catch (error) {
+        // Error saving data
+        console.log("error saving data");
+      }
+    };
+    _storeData2();
   }, [route.params?.awayScore2]);
   React.useEffect(() => {
-    if (route.params?.awayScore3) {
-      match.awayScoresAmerican[2] = awayScore3;
-      allMatches[index] = match;
-      const _storeData2 = async () => {
-        try {
-          await AsyncStorage.setItem("games", JSON.stringify(allMatches));
-        } catch (error) {
-          // Error saving data
-          console.log("error saving data");
-        }
-      };
-      _storeData2();
-      console.log(match, "dasfkfdaks;hahahahaha");
-    }
+    match.awayScoresAmerican[2] = awayScore3;
+    allMatches[index] = match;
+    const _storeData2 = async () => {
+      try {
+        await AsyncStorage.setItem("games", JSON.stringify(allMatches));
+      } catch (error) {
+        // Error saving data
+        console.log("error saving data");
+      }
+    };
+    _storeData2();
   }, [route.params?.awayScore3]);
   React.useEffect(() => {
-    if (route.params?.awayScore4) {
-      match.awayScoresAmerican[3] = awayScore4;
-      allMatches[index] = match;
-      const _storeData2 = async () => {
-        try {
-          await AsyncStorage.setItem("games", JSON.stringify(allMatches));
-        } catch (error) {
-          // Error saving data
-          console.log("error saving data");
-        }
-      };
-      _storeData2();
-      console.log(match, "dasfkfdaks;hahahahaha");
-    }
+    match.awayScoresAmerican[3] = awayScore4;
+    allMatches[index] = match;
+    const _storeData2 = async () => {
+      try {
+        await AsyncStorage.setItem("games", JSON.stringify(allMatches));
+      } catch (error) {
+        // Error saving data
+        console.log("error saving data");
+      }
+    };
+    _storeData2();
   }, [route.params?.awayScore4]);
   React.useEffect(() => {
-    if (route.params?.awayScore5) {
-      match.awayScoresAmerican[4] = awayScore5;
-      allMatches[index] = match;
-      const _storeData2 = async () => {
-        try {
-          await AsyncStorage.setItem("games", JSON.stringify(allMatches));
-        } catch (error) {
-          // Error saving data
-          console.log("error saving data");
-        }
-      };
-      _storeData2();
-      console.log(match, "dasfkfdaks;hahahahaha");
-    }
+    match.awayScoresAmerican[4] = awayScore5;
+    allMatches[index] = match;
+    const _storeData2 = async () => {
+      try {
+        await AsyncStorage.setItem("games", JSON.stringify(allMatches));
+      } catch (error) {
+        // Error saving data
+        console.log("error saving data");
+      }
+    };
+    _storeData2();
   }, [route.params?.awayScore5]);
   React.useEffect(() => {
-    if (route.params?.awayScore6) {
-      match.awayScoresAmerican[5] = awayScore6;
-      allMatches[index] = match;
-      const _storeData2 = async () => {
-        try {
-          await AsyncStorage.setItem("games", JSON.stringify(allMatches));
-        } catch (error) {
-          // Error saving data
-          console.log("error saving data");
-        }
-      };
-      _storeData2();
-      console.log(match, "dasfkfdaks;hahahahaha");
-    }
+    match.awayScoresAmerican[5] = awayScore6;
+    allMatches[index] = match;
+    const _storeData2 = async () => {
+      try {
+        await AsyncStorage.setItem("games", JSON.stringify(allMatches));
+      } catch (error) {
+        // Error saving data
+        console.log("error saving data");
+      }
+    };
+    _storeData2();
   }, [route.params?.awayScore6]);
   React.useEffect(() => {
-    if (route.params?.BakerhomeScore1) {
-      match.homeScoresBaker[0] = BakerhomeScore1;
-      allMatches[index] = match;
-      const _storeData2 = async () => {
-        try {
-          await AsyncStorage.setItem("games", JSON.stringify(allMatches));
-        } catch (error) {
-          // Error saving data
-          console.log("error saving data");
-        }
-      };
-      _storeData2();
-      console.log(match, "dasfkfdaks;hahahahaha");
-    }
+    match.homeScoresBaker[0] = BakerhomeScore1;
+    allMatches[index] = match;
+    const _storeData2 = async () => {
+      try {
+        await AsyncStorage.setItem("games", JSON.stringify(allMatches));
+      } catch (error) {
+        // Error saving data
+        console.log("error saving data");
+      }
+    };
+    _storeData2();
   }, [route.params?.BakerhomeScore1]);
   React.useEffect(() => {
-    if (route.params?.BakerhomeScore2) {
-      match.homeScoresBaker[1] = BakerhomeScore2;
-      allMatches[index] = match;
-      const _storeData2 = async () => {
-        try {
-          await AsyncStorage.setItem("games", JSON.stringify(allMatches));
-        } catch (error) {
-          // Error saving data
-          console.log("error saving data");
-        }
-      };
-      _storeData2();
-      console.log(match, "dasfkfdaks;hahahahaha");
-    }
+    match.homeScoresBaker[1] = BakerhomeScore2;
+    allMatches[index] = match;
+    const _storeData2 = async () => {
+      try {
+        await AsyncStorage.setItem("games", JSON.stringify(allMatches));
+      } catch (error) {
+        // Error saving data
+        console.log("error saving data");
+      }
+    };
+    _storeData2();
   }, [route.params?.BakerhomeScore2]);
   React.useEffect(() => {
-    if (route.params?.BakerhomeScore3) {
-      match.homeScoresBaker[2] = BakerhomeScore3;
-      allMatches[index] = match;
-      const _storeData2 = async () => {
-        try {
-          await AsyncStorage.setItem("games", JSON.stringify(allMatches));
-        } catch (error) {
-          // Error saving data
-          console.log("error saving data");
-        }
-      };
-      _storeData2();
-      console.log(match, "dasfkfdaks;hahahahaha");
-    }
+    match.homeScoresBaker[2] = BakerhomeScore3;
+    allMatches[index] = match;
+    const _storeData2 = async () => {
+      try {
+        await AsyncStorage.setItem("games", JSON.stringify(allMatches));
+      } catch (error) {
+        // Error saving data
+        console.log("error saving data");
+      }
+    };
+    _storeData2();
   }, [route.params?.BakerhomeScore3]);
   React.useEffect(() => {
-    if (route.params?.BakerhomeScore4) {
-      match.homeScoresBaker[3] = BakerhomeScore4;
-      allMatches[index] = match;
-      const _storeData2 = async () => {
-        try {
-          await AsyncStorage.setItem("games", JSON.stringify(allMatches));
-        } catch (error) {
-          // Error saving data
-          console.log("error saving data");
-        }
-      };
-      _storeData2();
-      console.log(match, "dasfkfdaks;hahahahaha");
-    }
+    match.homeScoresBaker[3] = BakerhomeScore4;
+    allMatches[index] = match;
+    const _storeData2 = async () => {
+      try {
+        await AsyncStorage.setItem("games", JSON.stringify(allMatches));
+      } catch (error) {
+        // Error saving data
+        console.log("error saving data");
+      }
+    };
+    _storeData2();
   }, [route.params?.BakerhomeScore4]);
   React.useEffect(() => {
-    if (route.params?.BakerhomeScore5) {
-      match.homeScoresBaker[4] = BakerhomeScore5;
-      allMatches[index] = match;
-      const _storeData2 = async () => {
-        try {
-          await AsyncStorage.setItem("games", JSON.stringify(allMatches));
-        } catch (error) {
-          // Error saving data
-          console.log("error saving data");
-        }
-      };
-      _storeData2();
-      console.log(match, "dasfkfdaks;hahahahaha");
-    }
+    match.homeScoresBaker[4] = BakerhomeScore5;
+    allMatches[index] = match;
+    const _storeData2 = async () => {
+      try {
+        await AsyncStorage.setItem("games", JSON.stringify(allMatches));
+      } catch (error) {
+        // Error saving data
+        console.log("error saving data");
+      }
+    };
+    _storeData2();
   }, [route.params?.BakerhomeScore5]);
   React.useEffect(() => {
-    if (route.params?.BakerawayScore1) {
-      match.awayScoresBaker[0] = BakerawayScore1;
-      allMatches[index] = match;
-      const _storeData2 = async () => {
-        try {
-          await AsyncStorage.setItem("games", JSON.stringify(allMatches));
-        } catch (error) {
-          // Error saving data
-          console.log("error saving data");
-        }
-      };
-      _storeData2();
-      console.log(match, "dasfkfdaks;hahahahaha");
-    }
+    match.awayScoresBaker[0] = BakerawayScore1;
+    allMatches[index] = match;
+    const _storeData2 = async () => {
+      try {
+        await AsyncStorage.setItem("games", JSON.stringify(allMatches));
+      } catch (error) {
+        // Error saving data
+        console.log("error saving data");
+      }
+    };
+    _storeData2();
   }, [route.params?.BakerawayScore1]);
   React.useEffect(() => {
-    if (route.params?.BakerawayScore2) {
-      match.awayScoresBaker[1] = BakerawayScore2;
-      allMatches[index] = match;
-      const _storeData2 = async () => {
-        try {
-          await AsyncStorage.setItem("games", JSON.stringify(allMatches));
-        } catch (error) {
-          // Error saving data
-          console.log("error saving data");
-        }
-      };
-      _storeData2();
-      console.log(match, "dasfkfdaks;hahahahaha");
-    }
+    match.awayScoresBaker[1] = BakerawayScore2;
+    allMatches[index] = match;
+    const _storeData2 = async () => {
+      try {
+        await AsyncStorage.setItem("games", JSON.stringify(allMatches));
+      } catch (error) {
+        // Error saving data
+        console.log("error saving data");
+      }
+    };
+    _storeData2();
   }, [route.params?.BakerawayScore2]);
   React.useEffect(() => {
-    if (route.params?.BakerawayScore3) {
-      match.awayScoresBaker[2] = BakerawayScore3;
-      allMatches[index] = match;
-      const _storeData2 = async () => {
-        try {
-          await AsyncStorage.setItem("games", JSON.stringify(allMatches));
-        } catch (error) {
-          // Error saving data
-          console.log("error saving data");
-        }
-      };
-      _storeData2();
-      console.log(match, "dasfkfdaks;hahahahaha");
-    }
+    match.awayScoresBaker[2] = BakerawayScore3;
+    allMatches[index] = match;
+    const _storeData2 = async () => {
+      try {
+        await AsyncStorage.setItem("games", JSON.stringify(allMatches));
+      } catch (error) {
+        // Error saving data
+        console.log("error saving data");
+      }
+    };
+    _storeData2();
   }, [route.params?.BakerawayScore3]);
   React.useEffect(() => {
-    if (route.params?.BakerawayScore4) {
-      match.awayScoresBaker[3] = BakerawayScore4;
-      allMatches[index] = match;
-      const _storeData2 = async () => {
-        try {
-          await AsyncStorage.setItem("games", JSON.stringify(allMatches));
-        } catch (error) {
-          // Error saving data
-          console.log("error saving data");
-        }
-      };
-      _storeData2();
-      console.log(match, "dasfkfdaks;hahahahaha");
-    }
+    match.awayScoresBaker[3] = BakerawayScore4;
+    allMatches[index] = match;
+    const _storeData2 = async () => {
+      try {
+        await AsyncStorage.setItem("games", JSON.stringify(allMatches));
+      } catch (error) {
+        // Error saving data
+        console.log("error saving data");
+      }
+    };
+    _storeData2();
   }, [route.params?.BakerawayScore4]);
   React.useEffect(() => {
-    if (route.params?.BakerawayScore5) {
-      match.awayScoresBaker[4] = BakerawayScore5;
-      allMatches[index] = match;
-      const _storeData2 = async () => {
-        try {
-          await AsyncStorage.setItem("games", JSON.stringify(allMatches));
-        } catch (error) {
-          // Error saving data
-          console.log("error saving data");
-        }
-      };
-      _storeData2();
-      console.log(match, "dasfkfdaks;hahahahaha");
-    }
+    match.awayScoresBaker[4] = BakerawayScore5;
+    allMatches[index] = match;
+    const _storeData2 = async () => {
+      try {
+        await AsyncStorage.setItem("games", JSON.stringify(allMatches));
+      } catch (error) {
+        // Error saving data
+        console.log("error saving data");
+      }
+    };
+    _storeData2();
   }, [route.params?.BakerawayScore5]);
   // React.useEffect(() => {
   //   if (route.params?.americanFrames) {
@@ -403,7 +336,7 @@ const Tabs = ({ navigation, route }) => {
   //       }
   //     };
   //     _storeData2();
-  //     console.log(match, "dasfkfdaks;hahahahaha");
+  //     ;
   //   }
   // }, [route.params?.americanFrames]);
   var [homeScore, awayScore] = calculateFinalScore(
